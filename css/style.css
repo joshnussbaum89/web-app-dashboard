@@ -340,203 +340,21 @@ template {
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
-* {
-  box-sizing: border-box;
-  font-family: "Work Sans";
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-a:hover {
-  color: pink;
-}
-
-h2,
-h3,
-h4,
-h5 {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
 /* ============================================= */
 /*              Body                            */
 /* ============================================= */
-.body-container {
-  width: 90%;
-  background-color: whitesmoke;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-}
-
-#about p {
-  padding: 2rem 0;
-}
-
-#main-nav,
-#page-description {
-  border-bottom: 1px solid #ccc;
-}
-
-#page-description {
-  margin: 0 20px;
-}
-
-#adopt {
-  margin: 0 20px;
-}
-
-.adopt-para p {
-  padding: 1.5rem 0;
-}
-
-#locations {
-  margin: 0 20px;
-  padding-top: 31.92px;
-  padding-bottom: calc(31.92px * 2);
-  border-bottom: 1px solid #ccc;
-}
-
 /* ============================================= */
 /*              Header                          */
 /* ============================================= */
 /* ============================================= */
 /*              Button                           */
 /* ============================================= */
-.contact-button button {
-  padding: 10px 20px;
-  border: 2px solid pink;
-  border-radius: 20px;
-  background-color: pink;
-  color: white;
-}
-.contact-button button:hover {
-  background-color: whitesmoke;
-  color: pink;
-  cursor: pointer;
-}
-
-.adopt-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 1rem 0 3rem;
-  border-bottom: 1px solid #ccc;
-}
-.adopt-buttons button {
-  padding: 10px 30px;
-  margin: 1rem 0.5rem;
-  border: 2px solid pink;
-  border-radius: 5px;
-  background-color: pink;
-  color: white;
-}
-.adopt-buttons button:hover {
-  background-color: whitesmoke;
-  color: pink;
-  cursor: pointer;
-}
-
 /* ============================================= */
 /*              Images                           */
 /* ============================================= */
-.page-desc-img {
-  display: flex;
-  justify-content: center;
-  padding: 30px 15px;
-  margin: 20px 0;
-}
-
-.paws-locations {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.paws-locations img {
-  width: 100%;
-}
-.paws-locations input {
-  width: 100%;
-  padding: 5px 5px 5px 18px;
-  outline: none;
-  border: 1px solid lightpink;
-  border-radius: 4px;
-  margin: 15px 0;
-  box-shadow: 0 2px 1.5px #ccc;
-}
-
-.pets-col {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.pets-col img {
-  margin: 2rem 0;
-}
-
-.search-input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 95%;
-  position: relative;
-}
-.search-input .locationmarker {
-  width: 13px;
-  right: 25px;
-  top: 22px;
-  position: absolute;
-  align-self: flex-end;
-  z-index: 1000;
-}
-
-.hide-content {
-  display: none;
-}
-
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
-#main-nav {
-  display: flex;
-  flex-direction: column;
-  margin: 0 20px;
-}
-#main-nav nav {
-  margin: 0.75rem;
-}
-#main-nav button {
-  margin-bottom: 1.5rem;
-}
-
-.site-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.site-logo img {
-  padding: 0 1rem;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-}
-.nav-list li {
-  padding: 15px 0;
-}
-
-.contact-button {
-  display: flex;
-  justify-content: center;
-}
-
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
