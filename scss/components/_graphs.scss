@@ -1,0 +1,25 @@
+/* ============================================= */
+/*              Graphs                           */
+/* ============================================= */
+
+.alert {
+    @include flexy($just: space-between);
+    color: $white;
+    margin: 0 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $purple-light;
+    p {
+        margin: 10px;
+        font-weight: bold;
+    }
+    span {
+        margin: 0 .6rem;
+        font-weight: lighter;
+    }
+    .exit-icon {
+        width: 15px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+}
