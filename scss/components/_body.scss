@@ -1,3 +1,84 @@
 /* ============================================= */
 /*              Body                            */
 /* ============================================= */
+body {
+    height: 100vh;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr) repeat(3, 3fr) 2fr repeat(4, 3fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'header'
+        'nav'
+        'main'
+        'mainGraph'
+        'dailyTraffic'
+        'mobileUsers'
+        'socialStats'
+        'newMembers'
+        'recentActivity'
+        'messageUser'
+        'settings';
+}
+
+
+header,
+nav,
+main,
+section {
+    padding: 20px;
+}
+
+main,
+section {
+    border: 1px solid $border;
+    color: black;
+}
+
+.header {
+    grid-area: header;
+    background-color: lighten($color: $purple, $amount: 20);
+}
+
+.nav {
+    grid-area: nav;
+    background-color: $purple;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main-graph {
+    grid-area: mainGraph;
+}
+
+.daily-traffic {
+    grid-area: dailyTraffic;
+}
+
+.mobile-users {
+    grid-area: mobileUsers;
+}
+
+.social-stats {
+    grid-area: socialStats;
+}
+
+.new-members {
+    grid-area: newMembers;
+}
+
+.recent-activity {
+    grid-area: recentActivity;
+}
+
+.message-user {
+    grid-area: messageUser;
+}
+
+.settings {
+    grid-area: settings;
+}

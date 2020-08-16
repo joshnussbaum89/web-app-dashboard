@@ -2,3 +2,45 @@
 /*              Media Queries                    */
 /* ============================================= */
 
+@media (min-width: $md) {
+    #container {
+        grid-template-columns: 80px 4fr;
+        grid-template-rows: repeat(2, 1fr) repeat(3, 3fr) 2fr repeat(4, 3fr);
+        grid-template-areas: 
+        'header header'
+        'nav main'
+        'nav mainGraph'
+        'nav dailyTraffic'
+        'nav mobileUsers'
+        'nav socialStats'
+        'nav newMembers'
+        'nav recentActivity'
+        'nav messageUser'
+        'nav settings';
+    }
+    .nav {
+        @include flexy($dir: column, $just: flex-start);
+    }
+    .dashboard,
+    .members,
+    .visits,
+    .settings-svg {
+        width: 30px;
+        padding: 15px 0;
+    }
+}
+
+@media (min-width: $lg) {
+    #container {
+        grid-template-columns: 80px 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr) 3fr 3fr 2fr repeat(2, 2fr);
+        grid-template-areas: 
+        'header header header'
+        'nav main main'
+        'nav mainGraph mainGraph'
+        'nav dailyTraffic mobileUsers'
+        'nav socialStats socialStats'
+        'nav newMembers recentActivity'
+        'nav messageUser settings'
+    }
+}

@@ -2,3 +2,40 @@
 /*              Header                          */
 /* ============================================= */
 
+.main-header {
+    @include flexy($align: center);
+    color: $white;
+}
+
+li:first-child {
+    flex-grow: 1;
+}
+
+ul {
+    padding: 0; 
+    margin: 0;
+    list-style-type: none;
+    li {
+        padding: 0 15px;
+    }
+}
+
+.span1 {
+    font-weight: bold;
+}
+
+.span2 {
+    font-weight: lighter;
+}
+
+.bell {
+    width: 20px;
+}
+
+.header-img-li {
+    @include flexy($align: center);
+    border-left: 1px solid $grey;
+    span {
+        margin-left: 10px;
+    }
+}
