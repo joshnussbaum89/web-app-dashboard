@@ -5,7 +5,7 @@
 @media (min-width: $md) {
     #container {
         grid-template-columns: 80px 4fr;
-        grid-template-rows: repeat(2, 90px) repeat(3, 1fr) 1fr repeat(4, 2fr);
+        grid-template-rows: repeat(2, 90px) repeat(3, auto) 1fr repeat(4, 1fr);
         grid-template-areas: 
         'header header'
         'nav main'
@@ -33,7 +33,7 @@
 @media (min-width: $lg) {
     #container {
         grid-template-columns: 80px 1fr 1fr;
-        grid-template-rows: repeat(2, 90px) 2fr repeat(2, 1fr) repeat(3, 1fr);
+        grid-template-rows: repeat(2, 90px) 1fr repeat(4, auto);
         grid-template-areas: 
         'header header header'
         'nav main main'
@@ -42,5 +42,14 @@
         'nav socialStats socialStats'
         'nav newMembers recentActivity'
         'nav messageUser settings'
+    }
+    .stats {
+        @include flexy($dir: row, $just: space-between, $align: center);
+        &-container {
+            background-color: $container;
+            border: 1px solid $border;
+            border-radius: 5px;
+            padding: 50px 100px;
+        }
     }
 }

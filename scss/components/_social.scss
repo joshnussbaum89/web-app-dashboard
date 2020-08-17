@@ -1,0 +1,35 @@
+/* ============================================= */
+/*              Social                           */
+/* ============================================= */
+.social {
+    h2 {
+        margin-left: 15px;
+    }
+}
+.stats {
+    @include flexy($dir: column);
+    &-container {
+        @include flexy($align: center, $just: space-around);
+        background-color: $container;
+        border: 1px solid $border;
+        border-radius: 5px;
+        padding: 50px 100px;
+    }
+}
+
+.social-svg {
+    border-radius: 50%;
+    padding: 20px 20px 15px 20px;
+    background-color: $purple-light;
+}
+
+.twitter-svg {
+    width: 40px;
+}
+
+.social-data {
+    p {
+        font-size: 3rem;
+        font-weight: 100;
+    }
+}

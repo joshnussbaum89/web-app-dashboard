@@ -139,7 +139,7 @@ let dailyTrafficChart = new Chart(dailyChart, {
 let mobileDataChart = new Chart(mobileChart, {
     type: 'doughnut',
     data: {
-        labels: ['desktop', 'phones', 'tablets',],
+        labels: ['Desktop', 'Phones', 'Tablets',],
         datasets: [{
             label: 'Mobile Users',
             data: [

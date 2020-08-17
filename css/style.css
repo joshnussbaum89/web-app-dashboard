@@ -360,7 +360,7 @@ body {
 #container {
   border-right: 1px solid #ccc;
   display: grid;
-  grid-template-rows: repeat(3, 90px) repeat(3, 1fr) 2fr repeat(4, 3fr);
+  grid-template-rows: repeat(3, 90px) repeat(3, auto) 1fr repeat(4, auto);
   grid-template-columns: 1fr;
   grid-template-areas: "header" "nav" "main" "mainGraph" "dailyTraffic" "mobileUsers" "socialStats" "newMembers" "recentActivity" "messageUser" "settings";
 }
@@ -403,7 +403,7 @@ section {
   grid-area: mobileUsers;
 }
 
-.social-stats {
+.social {
   grid-area: socialStats;
 }
 
@@ -591,12 +591,48 @@ li:first-child {
 }
 
 /* ============================================= */
+/*              Social                           */
+/* ============================================= */
+.social h2 {
+  margin-left: 15px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+}
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 50px 100px;
+}
+
+.social-svg {
+  border-radius: 50%;
+  padding: 20px 20px 15px 20px;
+  background-color: rgba(88, 70, 194, 0.747);
+}
+
+.twitter-svg {
+  width: 40px;
+}
+
+.social-data p {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+/* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
   #container {
     grid-template-columns: 80px 4fr;
-    grid-template-rows: repeat(2, 90px) repeat(3, 1fr) 1fr repeat(4, 2fr);
+    grid-template-rows: repeat(2, 90px) repeat(3, auto) 1fr repeat(4, 1fr);
     grid-template-areas: "header header" "nav main" "nav mainGraph" "nav dailyTraffic" "nav mobileUsers" "nav socialStats" "nav newMembers" "nav recentActivity" "nav messageUser" "nav settings";
   }
 
@@ -617,8 +653,21 @@ li:first-child {
 @media (min-width: 992px) {
   #container {
     grid-template-columns: 80px 1fr 1fr;
-    grid-template-rows: repeat(2, 90px) 2fr repeat(2, 1fr) repeat(3, 1fr);
+    grid-template-rows: repeat(2, 90px) 1fr repeat(4, auto);
     grid-template-areas: "header header header" "nav main main" "nav mainGraph mainGraph" "nav dailyTraffic mobileUsers" "nav socialStats socialStats" "nav newMembers recentActivity" "nav messageUser settings";
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stats-container {
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 50px 100px;
   }
 }
 

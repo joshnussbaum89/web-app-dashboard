@@ -14,8 +14,12 @@
 </head>
 
 <body>
+
 	<div id="container">
+
+		<!-- Header -->
 		<header class="header">
+
 			<ul class="main-header">
 				<li><span class="span1">Your</span><span class="span2">App&trade;</span></li>
 				<li>
@@ -30,8 +34,12 @@
 					<span>Josh Sullivan</span>
 				</li>
 			</ul>
+
 		</header>
+
+		<!-- Navigation -->
 		<nav class="nav">
+
 			<a href="#dashboard"><svg class="dashboard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 					<path
 						d="M25 18c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zm1 12c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zm-7 4c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zM28 0H6C3.8 0 2 1.8 2 4v24c0 2.2 1.8 4 4 4h22c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zm2 28c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V8h26v20zm0-22H4V4c0-1.1.9-2 2-2h22c1.1 0 2 .9 2 2v2zM17 18c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zM9 26c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2H8v-2zm1-4c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2H8v-2z"
@@ -52,21 +60,31 @@
 						d="M26 24H14.9c-.4-1.7-2-3-3.9-3s-3.4 1.3-3.9 3H6c-.6 0-1 .4-1 1s.4 1 1 1h1.1c.4 1.7 2 3 3.9 3s3.4-1.3 3.9-3H26c.6 0 1-.4 1-1s-.4-1-1-1zm-15 3.4c-1.3 0-2.4-1.1-2.4-2.4 0-1.3 1.1-2.4 2.4-2.4 1.3 0 2.4 1.1 2.4 2.4 0 1.3-1.1 2.4-2.4 2.4zM26 8H14.9c-.4-1.7-2-3-3.9-3S7.6 6.3 7.1 8H6c-.6 0-1 .4-1 1s.4 1 1 1h1.1c.4 1.7 2 3 3.9 3s3.4-1.3 3.9-3H26c.6 0 1-.4 1-1s-.4-1-1-1zm-15 3.4c-1.3 0-2.4-1.1-2.4-2.4 0-1.3 1.1-2.4 2.4-2.4 1.3 0 2.4 1.1 2.4 2.4 0 1.3-1.1 2.4-2.4 2.4zM26 16h-2.1c-.4-1.7-2-3-3.9-3s-3.4 1.3-3.9 3H6c-.6 0-1 .4-1 1s.4 1 1 1h10.1c.4 1.7 2 3 3.9 3s3.4-1.3 3.9-3H26c.6 0 1-.4 1-1s-.4-1-1-1zm-6 3.4c-1.3 0-2.4-1.1-2.4-2.4 0-1.3 1.1-2.4 2.4-2.4 1.3 0 2.4 1.1 2.4 2.4 0 1.3-1.1 2.4-2.4 2.4zM28 0H4C1.8 0 0 1.8 0 4v24c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zm2 28c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h24c1.1 0 2 .9 2 2v24z"
 						fill="#fff" />
 				</svg></a>
+
 		</nav>
+
+		<!-- Search -->
 		<main id="dashboard" class="main">
+
 			<div>
 				<p>Dashboard</p>
 			</div>
+
 			<div class="main-container-grey">
 				<input id="search" type="search" placeholder="Search">
 				<img class="search-icon" src="icons/search.svg" alt="search">
 			</div>
+
 		</main>
+
 		<section class="main-graph">
+
+			<!-- Alert Box -->
 			<div class="alert">
 				<p>Alert <span>this is an alert that you can click out of if you need to.</span></p>
 				<img class="exit-icon" src="icons/close.svg" alt="exit">
 			</div>
+
 			<!-- chart labels -->
 			<div class="traffic">
 				<h2>Traffic</h2>
@@ -77,41 +95,76 @@
 					<li>Monthly</li>
 				</ul>
 			</div>
+
 			<!-- main chart -->
 			<div class="chart-container">
 				<canvas id="mainChart"></canvas>
 			</div>
+
 		</section>
+
 		<section class="daily-traffic">
+
 			<!-- dail traffic chart -->
 			<h2>Daily Traffic</h2>
 			<div class="chart-container">
 				<canvas id="dailyChart"></canvas>
 			</div>
+
 		</section>
+
 		<section class="mobile-users">
-			<h2>Daily Traffic</h2>
+			<h2>Mobile Users</h2>
 			<div class="chart-container">
 				<canvas id="mobileChart"></canvas>
 			</div>
 		</section>
-		<section class="social-stats">
-			7
+
+		<section class="social">
+			<h2>Social Stats</h2>
+			<div class="stats">
+				<div class="stats-container">
+					<div class="social-svg">
+						<svg class="twitter-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path class="path" fill="white"
+								d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z" />
+						</svg>
+					</div>
+					<div class="social-data">
+						<h3>Twitter</h3>
+						<p>10,345</p>
+					</div>
+				</div>
+				<div class="stats-container">
+					Facebook
+				</div>
+				<div class="stats-container">
+					Google+
+				</div>
+			</div>
 		</section>
+
 		<section class="new-members">
 			8
 		</section>
+
 		<section class="recent-activity">
 			9
 		</section>
+
 		<section class="message-user">
 			10
 		</section>
+
 		<section class="settings">
 			11
 		</section>
+
 	</div>
+
+	<!-- JavaScript  -->
 	<script src="js/main.js"></script>
+
 </body>
 
 </html>
