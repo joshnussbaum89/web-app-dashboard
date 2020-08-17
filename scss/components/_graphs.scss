@@ -23,3 +23,23 @@
         cursor: pointer;
     }
 }
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 100%;
+    width: 99%;
+}
+
+.traffic {
+    margin: 0 15px;
+    @include flexy($just: space-between, $align: center);
+    &-li {
+        @include flexy();
+        cursor: pointer;
+        list-style-type: none;
+        li {
+            padding-left: 15px;
+        }
+    }
+}

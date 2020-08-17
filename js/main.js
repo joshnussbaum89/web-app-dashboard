@@ -21,51 +21,65 @@ exitIcon.addEventListener('click', () => {
     alert.style.transition = '.4s';
 })
 
+// Main Chart
+let myChart = document.getElementById('myChart').getContext('2d');
 
-// // Our labels along the x-axis
-// var years = [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050];
-// // For drawing the lines
-// var africa = [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478];
-// var asia = [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267];
-// var europe = [168, 170, 178, 190, 203, 276, 408, 547, 675, 734];
-// var latinAmerica = [40, 20, 10, 16, 24, 38, 74, 167, 508, 784];
-// var northAmerica = [6, 3, 2, 2, 7, 26, 82, 172, 312, 433];
-// var ctx = document.getElementById("myChart");
-// var myChart = new Chart(ctx, {
-//     type: 'line',
-//     data: {
-//         labels: years,
-//         datasets: [
-//             {
-//                 data: africa,
-//                 label: "Africa",
-//                 borderColor: "#3e95cd",
-//                 fill: false
-//             },
-//             {
-//                 data: asia,
-//                 label: "Asia",
-//                 borderColor: "#8e5ea2",
-//                 fill: false
-//             },
-//             {
-//                 data: europe,
-//                 label: "Europe",
-//                 borderColor: "#3cba9f",
-//                 fill: false
-//             },
-//             {
-//                 data: latinAmerica,
-//                 label: "Latin America",
-//                 borderColor: "#e8c3b9",
-//                 fill: false
-//             },
-//             {
-//                 data: northAmerica,
-//                 label: "North America",
-//                 borderColor: "#c45850",
-//                 fill: false
-//             }
-//         ]
-//     }
-// });
+// Global Options
+Chart.defaults.global.defaultFontFamily = 'Comfortaa';
+Chart.defaults.global.defaultFontSize = 15;
+
+let massPopChart = new Chart(myChart, {
+    type: 'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+    data: {
+        labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+        datasets: [{
+            label: 'Traffic',
+            data: [
+                750,
+                1250,
+                1000,
+                1500,
+                2000,
+                1500,
+                1750,
+                1250,
+                1750,
+                2250,
+                1750,
+                2250
+            ],
+            backgroundColor: [
+                'rgba(0, 17, 143, 0.2)',
+            ],
+            borderWidth: 1,
+            borderColor: '#777',
+            hoverBorderWidth: '3',
+            hoverBorderColor: '#000'
+        }]
+    },
+    options: {
+        // title: {
+        //     display: true,
+        //     text: 'Largest Cities In Massachusetts',
+        //     fontSize: 25
+        // },
+        legend: {
+            display: false,
+            align: 'start',
+            labels: {
+                fontColor: '#000'
+            }
+        },
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                bottom: 10,
+                top: 30
+            },
+        },
+        tooltips: {
+            enabled: true
+        }
+    }
+});

@@ -9,7 +9,6 @@
 		crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet">
-
 	<link rel="stylesheet" href="css/style.css">
 	<title>Web App Dashboard</title>
 </head>
@@ -69,7 +68,18 @@
 				<img class="exit-icon" src="icons/close.svg" alt="exit">
 			</div>
 			<!-- chart.js -->
-			<!-- <canvas id="myChart" width="100" height="100"></canvas> -->
+			<div class="traffic">
+				<h2>Traffic</h2>
+				<ul class="traffic-li">
+					<li>Hourly</li>
+					<li>Daily</li>
+					<li>Weekly</li>
+					<li>Monthly</li>
+				</ul>
+			</div>
+			<div class="chart-container">
+				<canvas id="myChart"></canvas>
+			</div>
 		</section>
 		<section class="daily-traffic">
 			5
