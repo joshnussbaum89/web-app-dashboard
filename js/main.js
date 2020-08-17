@@ -21,15 +21,18 @@ exitIcon.addEventListener('click', () => {
     alert.style.transition = '.4s';
 })
 
-// Main Chart
-let myChart = document.getElementById('myChart').getContext('2d');
+// Charts
+let mainChart = document.getElementById('mainChart').getContext('2d');
+let dailyChart = document.getElementById('dailyChart').getContext('2d');
+let mobileChart = document.getElementById('mobileChart').getContext('2d');
 
 // Global Options
 Chart.defaults.global.defaultFontFamily = 'Comfortaa';
 Chart.defaults.global.defaultFontSize = 15;
 
-let massPopChart = new Chart(myChart, {
-    type: 'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+// Hourly, Daily, Weekly, Monthly Line Chart 
+let trafficChart = new Chart(mainChart, {
+    type: 'line',
     data: {
         labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
         datasets: [{
@@ -58,11 +61,6 @@ let massPopChart = new Chart(myChart, {
         }]
     },
     options: {
-        // title: {
-        //     display: true,
-        //     text: 'Largest Cities In Massachusetts',
-        //     fontSize: 25
-        // },
         legend: {
             display: false,
             align: 'start',
@@ -76,6 +74,107 @@ let massPopChart = new Chart(myChart, {
                 right: 0,
                 bottom: 10,
                 top: 30
+            },
+        },
+        tooltips: {
+            enabled: true
+        }
+    }
+});
+
+// Daily Traffic Bar Chart
+let dailyTrafficChart = new Chart(dailyChart, {
+    type: 'bar',
+    data: {
+        labels: ['s', 'm', 't', 'w', 't', 'f', 's'],
+        datasets: [{
+            label: 'Traffic',
+            data: [
+                75,
+                100,
+                175,
+                150,
+                225,
+                200,
+                100,
+            ],
+            backgroundColor: [
+                'rgba(52, 40, 122, 0.8)',
+                'rgba(52, 40, 122, 0.8)',
+                'rgba(52, 40, 122, 0.8)',
+                'rgba(52, 40, 122, 0.8)',
+                'rgba(52, 40, 122, 0.8)',
+                'rgba(52, 40, 122, 0.8)',
+                'rgba(52, 40, 122, 0.8)',
+            ],
+            borderWidth: 1,
+            borderColor: '#777',
+            hoverBorderWidth: '3',
+            hoverBorderColor: '#000'
+        }]
+    },
+    options: {
+        legend: {
+            display: false,
+            align: 'start',
+            labels: {
+                fontColor: '#000'
+            }
+        },
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                bottom: 0,
+                top: 0
+            },
+        },
+        tooltips: {
+            enabled: true
+        }
+    }
+});
+
+// Mobile Data Doughnut Chart
+let mobileDataChart = new Chart(mobileChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['desktop', 'phones', 'tablets',],
+        datasets: [{
+            label: 'Mobile Users',
+            data: [
+                65,
+                20,
+                15
+            ],
+            backgroundColor: [
+                'rgba(52, 40, 122, 0.8)',
+                '#63cc82',
+                '#4da2bb',
+            ],
+            borderWidth: 1,
+            borderColor: '#777',
+            hoverBorderWidth: '3',
+            hoverBorderColor: '#000'
+        }]
+    },
+    options: {
+        legend: {
+            display: true,
+            position: 'right',
+            align: 'center',
+            labels: {
+                fontColor: '#000',
+                boxWidth: 20,
+                padding: 30
+            }
+        },
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                bottom: 0,
+                top: 0
             },
         },
         tooltips: {
