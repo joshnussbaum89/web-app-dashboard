@@ -57,7 +57,7 @@ let trafficChart = new Chart(mainChart, {
             borderWidth: 1,
             borderColor: '#777',
             hoverBorderWidth: '3',
-            hoverBorderColor: '#000'
+            hoverBorderColor: 'rgb(51, 51, 51)'
         }]
     },
     options: {
@@ -65,7 +65,7 @@ let trafficChart = new Chart(mainChart, {
             display: false,
             align: 'start',
             labels: {
-                fontColor: '#000'
+                fontColor: 'rgb(51, 51, 51)'
             }
         },
         layout: {
@@ -110,16 +110,12 @@ let dailyTrafficChart = new Chart(dailyChart, {
             borderWidth: 1,
             borderColor: '#777',
             hoverBorderWidth: '3',
-            hoverBorderColor: '#000'
+            hoverBorderColor: 'rgb(51, 51, 51)'
         }]
     },
     options: {
         legend: {
-            display: false,
-            align: 'start',
-            labels: {
-                fontColor: '#000'
-            }
+            display: false
         },
         layout: {
             padding: {
@@ -155,7 +151,7 @@ let mobileDataChart = new Chart(mobileChart, {
             borderWidth: 1,
             borderColor: '#777',
             hoverBorderWidth: '3',
-            hoverBorderColor: '#000'
+            hoverBorderColor: 'rgb(51, 51, 51)'
         }]
     },
     options: {
@@ -164,7 +160,7 @@ let mobileDataChart = new Chart(mobileChart, {
             position: 'right',
             align: 'center',
             labels: {
-                fontColor: '#000',
+                fontColor: 'rgb(51, 51, 51)',
                 boxWidth: 20,
                 padding: 30
             }

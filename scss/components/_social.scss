@@ -7,17 +7,20 @@
     }
 }
 .stats {
-    @include flexy($dir: column);
+    @include flexy($dir: column, $align: center);
     &-container {
-        @include flexy($align: center, $just: space-around);
+        @include flexy($align: center, $just: space-evenly);
+        width: 75%;
         background-color: $container;
         border: 1px solid $border;
         border-radius: 5px;
-        padding: 50px 100px;
+        padding: 5px 30px;
+        margin: 25px;
     }
 }
 
 .social-svg {
+    @include flexy($align: center, $just: center);
     border-radius: 50%;
     padding: 20px 20px 15px 20px;
     background-color: $purple-light;
@@ -28,8 +31,16 @@
 }
 
 .social-data {
+    @include flexy($dir: column, $align: flex-start);
+    margin: 1rem;
+    h3 {
+        color: $purple-light;
+        margin: .2rem 0;
+        font-size: 1rem;
+    }
     p {
+        margin: .2rem 0;
         font-size: 3rem;
-        font-weight: 100;
+        font-weight: lighter;
     }
 }

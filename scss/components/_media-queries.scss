@@ -28,6 +28,11 @@
         width: 30px;
         padding: 15px 0;
     }
+    .stats {
+        &-container {
+            width: 60%;
+        }
+    }
 }
 
 @media (min-width: $lg) {
@@ -44,12 +49,10 @@
         'nav messageUser settings'
     }
     .stats {
-        @include flexy($dir: row, $just: space-between, $align: center);
+        @include flexy($dir: row, $just: space-around);
         &-container {
-            background-color: $container;
-            border: 1px solid $border;
-            border-radius: 5px;
-            padding: 50px 100px;
+            width: 30%;
+            margin: 0 auto 15px;
         }
     }
 }

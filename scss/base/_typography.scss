@@ -6,3 +6,15 @@
     font-family: 'Comfortaa', cursive;
     box-sizing: border-box;
 }
+
+.main,
+.traffic,
+.daily-traffic,
+.mobile-users,
+.social,
+.new-members,
+.recent-activity,
+.message-user,
+.settings {
+    color: $dark-text;
+}
