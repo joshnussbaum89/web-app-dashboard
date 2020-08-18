@@ -4,6 +4,9 @@
 
 .alert {
     @include flexy($just: space-between);
+    // display: flex,
+    // -webkit-flex;
+    // justify-content: space-between;
     color: $white;
     margin: 0 15px;
     padding: 5px;
