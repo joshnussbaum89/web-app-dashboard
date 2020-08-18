@@ -391,12 +391,12 @@ section {
 
 .header {
   grid-area: header;
-  background-color: rgba(88, 70, 194, 0.747);
+  background-color: #5846c2;
 }
 
 .nav {
   grid-area: nav;
-  background-color: rgba(52, 40, 122, 0.747);
+  background-color: #34287A;
 }
 
 .main {
@@ -482,6 +482,7 @@ section {
   display: flex;
   align-items: center;
   color: #fff;
+  position: relative;
 }
 
 li:first-child {
@@ -505,10 +506,6 @@ li:first-child {
   font-weight: lighter;
 }
 
-.bell {
-  width: 20px;
-}
-
 .header-img-li {
   display: flex;
   align-items: center;
@@ -516,6 +513,79 @@ li:first-child {
 }
 .header-img-li span {
   margin-left: 10px;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-10deg);
+  }
+  10% {
+    transform: rotate(10deg);
+    fill: #ff784f;
+  }
+  20% {
+    transform: rotate(-10deg);
+    fill: pink;
+  }
+  30% {
+    transform: rotate(10deg);
+    fill: #52bab3;
+  }
+  40% {
+    transform: rotate(-10deg);
+    fill: #481394;
+  }
+  50% {
+    transform: rotate(10deg);
+    fill: #f22f46;
+  }
+  60% {
+    transform: rotate(-10deg);
+    fill: yellow;
+  }
+  70% {
+    transform: rotate(10deg);
+    fill: #fd7856;
+  }
+  80% {
+    transform: rotate(-10deg);
+    fill: #63cc82;
+  }
+  90% {
+    transform: rotate(10deg);
+    fill: #481394;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.main-header li::after {
+  content: "";
+  padding: 4px;
+  border-radius: 50%;
+  background-color: #63cc82;
+  position: absolute;
+  bottom: 32px;
+  right: 220px;
+}
+
+.bell-svg {
+  width: 20px;
+}
+
+.bell-path {
+  animation: wiggle 2s 0.5s ease-in-out forwards;
+  transform-origin: center;
+}
+
+.bell-svg:hover {
+  transform: scale(1.3);
+}
+
+.bell-svg {
+  margin: 10px;
+  transition: transform 0.4s ease-out;
+  cursor: pointer;
 }
 
 /* ============================================= */
@@ -527,11 +597,12 @@ li:first-child {
 .alert {
   display: flex;
   justify-content: space-between;
+  height: 50px;
   color: #fff;
   margin: 0 15px;
-  padding: 5px;
+  padding: 5px 15px;
   border-radius: 5px;
-  background-color: rgba(88, 70, 194, 0.747);
+  background-color: #5846c2;
 }
 .alert p {
   margin: 10px;
@@ -632,7 +703,7 @@ li:first-child {
   align-items: center;
   border-radius: 50%;
   padding: 20px 20px 15px 20px;
-  background-color: rgba(88, 70, 194, 0.747);
+  background-color: #5846c2;
 }
 
 .twitter-svg,
@@ -649,7 +720,7 @@ li:first-child {
   margin: 1rem;
 }
 .social-data h3 {
-  color: rgba(88, 70, 194, 0.747);
+  color: #5846c2;
   margin: 0.2rem 0;
   font-size: 1rem;
 }

@@ -4,12 +4,10 @@
 
 .alert {
     @include flexy($just: space-between);
-    // display: flex,
-    // -webkit-flex;
-    // justify-content: space-between;
+    height: 50px;
     color: $white;
     margin: 0 15px;
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 5px;
     background-color: $purple-light;
     p {

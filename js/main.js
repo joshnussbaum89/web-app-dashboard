@@ -78,8 +78,15 @@ let trafficChart = new Chart(mainChart, {
         },
         tooltips: {
             enabled: true
-        }
-    }
+        },
+        // animation: {
+        //     duration: 0, // general animation time
+        // },
+        // hover: {
+        //     animationDuration: 0, // duration of animations when hovering an item
+        // },
+        // responsiveAnimationDuration: 0,
+    },
 });
 
 // Daily Traffic Bar Chart
@@ -127,7 +134,14 @@ let dailyTrafficChart = new Chart(dailyChart, {
         },
         tooltips: {
             enabled: true
-        }
+        },
+        // animation: {
+        //     duration: 0, // general animation time
+        // },
+        // hover: {
+        //     animationDuration: 0, // duration of animations when hovering an item
+        // },
+        // responsiveAnimationDuration: 0,
     }
 });
 
@@ -170,11 +184,18 @@ let mobileDataChart = new Chart(mobileChart, {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                top: 0
+                top: 0  
             },
         },
         tooltips: {
             enabled: true
-        }
+        },
+        // animation: {
+        //     duration: 0, // general animation time
+        // },
+        // hover: {
+        //     animationDuration: 0, // duration of animations when hovering an item
+        // },
+        // responsiveAnimationDuration: 0,
     }
 });
