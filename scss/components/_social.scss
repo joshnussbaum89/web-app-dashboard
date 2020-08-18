@@ -26,9 +26,14 @@
     background-color: $purple-light;
 }
 
-.twitter-svg {
+.twitter-svg,
+.facebook-svg,
+.google-svg {
     width: 40px;
+    height: 40px;
 }
+
+
 
 .social-data {
     @include flexy($dir: column, $align: flex-start);

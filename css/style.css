@@ -635,8 +635,11 @@ li:first-child {
   background-color: rgba(88, 70, 194, 0.747);
 }
 
-.twitter-svg {
+.twitter-svg,
+.facebook-svg,
+.google-svg {
   width: 40px;
+  height: 40px;
 }
 
 .social-data {
