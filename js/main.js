@@ -2,10 +2,12 @@
 /*              JavaScript                       */
 /* ============================================= */
 
+// Search
 const search = document.querySelector('#search');
 const exitIcon = document.querySelector('.exit-icon');
 const alert = document.querySelector('.alert');
 
+// Settings on/off switches
 const smallCirc1 = document.querySelector('.small-circ1');
 const bigCirc1 = document.querySelector('.big-circ1');
 const smallCirc2 = document.querySelector('.small-circ2');
