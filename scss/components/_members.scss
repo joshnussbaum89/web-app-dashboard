@@ -1,0 +1,42 @@
+/* ============================================= */
+/*              Members                          */
+/* ============================================= */
+
+.new-members {
+    &-info {
+        @include flexy($dir: column);
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+        
+    }
+    &-list {
+        padding: 15px 0;
+        @include flexy($dir: row, $align: center);
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+    &-list:not(:last-child) {
+        border-bottom: 1px solid $border;
+    }
+    &-contact {
+        flex-grow: 1;
+        h5 {
+            font-size: 1rem;
+        }
+        span {
+            font-size: .8rem;
+            color: $purple-light;
+            cursor: pointer;
+        }
+        h5,
+        span {
+            padding: 2px 10px;
+            margin: 0;
+        }
+    }
+}
+
