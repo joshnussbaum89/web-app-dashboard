@@ -6,6 +6,12 @@ const search = document.querySelector('#search');
 const exitIcon = document.querySelector('.exit-icon');
 const alert = document.querySelector('.alert');
 
+const smallCirc1 = document.querySelector('.small-circ1');
+const bigCirc1 = document.querySelector('.big-circ1');
+const smallCirc2 = document.querySelector('.small-circ2');
+const bigCirc2 = document.querySelector('.big-circ2');
+
+
 // Hide search icons when focused
 search.addEventListener('focusin', () => {
     document.querySelector('.search-icon').classList.toggle('hide-content');
@@ -19,6 +25,14 @@ search.addEventListener('focusout', () => {
 exitIcon.addEventListener('click', () => {
     alert.style.display = 'none';
     alert.style.transition = '.4s';
+})
+
+// toggle settings switch on/off
+bigCirc1.addEventListener('click', () => {
+    smallCirc1.classList.toggle('margin-left');
+})
+bigCirc2.addEventListener('click', () => {
+    smallCirc2.classList.toggle('margin-left');
 })
 
 // Charts
@@ -184,7 +198,7 @@ let mobileDataChart = new Chart(mobileChart, {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                top: 0  
+                top: 0
             },
         },
         tooltips: {

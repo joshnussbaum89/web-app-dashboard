@@ -78,3 +78,136 @@
         width: 15px;
     }
 }
+
+.message-user {
+    &-form {
+        @include flexy($dir: column);
+        input,
+        textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid $border;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px;
+            color: $white;
+            background-color: $purple-light;
+            border: 2px solid $purple-light;
+            border-radius: 5px;
+            transition: .4s;
+            cursor: pointer;
+        }
+        button:hover {
+            color: $purple-light;
+            background-color: white;
+        }
+        button:active {
+            color: $white;
+            background-color: $purple-light;
+            transition: none;
+        }
+
+    }
+}
+
+.settings {
+    &-options {
+        list-style-type: none;
+        padding: 0;
+    }
+    &-container {
+        width: 50%;
+    }
+    .timezones{
+        margin: 15px 0 10px;
+        padding: 10px;
+        border: 1px solid $border;
+        border-radius: 5px;
+        color: $grey;
+    } 
+}
+
+.notifications {
+    @include flexy($align: center, $just: space-between);
+    margin: 25px 0;
+    span {
+        font-size: .8rem;
+    }
+}
+
+.big-circ1,
+.big-circ2 {
+    @include flexy();
+    background-color: $purple-light;
+    margin: 0 10px;
+    padding: 3px;
+    min-width: 75px;
+    max-width: 75px;
+    border: 1px solid $border;
+    border-radius: 50px;
+    cursor: pointer;
+}
+  
+.small-circ1,
+.small-circ2 {
+    background-color: $white;
+    padding: 10px;
+    border: 1px solid $border;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.timezone {
+    @include flexy($dir: column);
+    .timezones {
+        cursor: pointer;
+        width: 100%;
+    }
+}
+
+.timezone-buttons {
+    @include flexy($just: space-between);
+    .save-button,
+    .cancel-button {
+        margin: 10px 0;
+        padding: 10px;
+        width: 48%;
+        color: $white;
+        background-color: $purple-light;
+        border: 2px solid $purple-light;
+        border-radius: 5px;
+        transition: .4s;
+        cursor: pointer;
+    }
+    .save-button:hover {
+        color: $purple-light;
+        background-color: white;
+    }
+    .save-button:active {
+        color: $white;
+        background-color: $purple-light;
+        transition: none;
+    }
+    .cancel-button {
+        background-color: $border;
+        border: 2px solid $border;
+    }
+    .cancel-button:hover {
+        color: $border;
+        background-color: white;
+    }
+    .cancel-button:active {
+        color: $white;
+        background-color: $dark-text;
+        transition: none;
+    }
+}
+
+.margin-left {
+    margin-left: auto;
+}
