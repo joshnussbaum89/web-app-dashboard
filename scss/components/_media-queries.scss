@@ -55,4 +55,8 @@
             margin: 0 auto 15px;
         }
     }
+    .new-members, 
+    .message-user {
+        border-right: 1px solid $border;
+    }
 }
