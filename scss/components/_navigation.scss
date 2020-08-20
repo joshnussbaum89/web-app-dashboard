@@ -11,5 +11,13 @@
 .visits,
 .settings-svg {
     width: 30px;
-    fill: $grey;
+    fill: $border;
+    transition: .2s;
+}
+
+.dashboard:hover,
+.members:hover,
+.visits:hover,
+.settings-svg:hover {
+    fill: $white;
 }

@@ -48,6 +48,9 @@
         'nav newMembers recentActivity'
         'nav messageUser settings'
     }
+    .daily-traffic {
+        border-right: 1px solid $border;
+    }
     .stats {
         @include flexy($dir: row, $just: space-around);
         &-container {

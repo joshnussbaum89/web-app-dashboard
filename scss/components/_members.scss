@@ -135,14 +135,14 @@
 .notifications {
     @include flexy($align: center, $just: space-between);
     margin: 25px 0;
-    span {
+    .notifications-label {
         font-size: .8rem;
     }
 }
 
 .big-circ1,
 .big-circ2 {
-    @include flexy();
+    @include flexy($align: center, $just: space-between);
     background-color: $grey;
     margin: 0 10px;
     padding: 3px;
@@ -151,6 +151,29 @@
     border: 1px solid $border;
     border-radius: 50px;
     cursor: pointer;
+    .email-on1,
+    .email-off1,
+    .email-on2,
+    .email-off2 {
+        color: $white;
+        font-weight: bold;
+        font-size: .6rem;
+        padding: 1px 6px 0;
+    }
+}
+
+//labels invisible on page load
+.email-on1,
+.email-on2 {
+    display: none;
+}
+
+//JS classes
+.displayBlock {
+    display: block;
+}
+.displayNone {
+    display: none;
 }
   
 .small-circ1,
@@ -194,16 +217,16 @@
         transition: none;
     }
     .cancel-button {
-        background-color: $border;
-        border: 2px solid $border;
+        background-color: $grey;
+        border: 2px solid $grey;
     }
     .cancel-button:hover {
-        color: $border;
+        color: $grey;
         background-color: white;
     }
     .cancel-button:active {
         color: $white;
-        background-color: $dark-text;
+        background-color: $grey;
         transition: none;
     }
 }
