@@ -2,7 +2,7 @@
 /*              Graphs                           */
 /* ============================================= */
 
-.alert {
+.alert-box {
     @include flexy($just: space-between);
     height: 50px;
     color: $white;
@@ -40,9 +40,35 @@
         cursor: pointer;
         list-style-type: none;
         li {
-            padding-left: 15px;
+            padding: 8px;
+            transition: .1s;
         }
     }
+}
+
+.traffic-item1,
+.traffic-item2,
+.traffic-item3,
+.traffic-item4 {
+    border: 1px solid $white;
+} 
+
+.traffic-item1:hover,
+.traffic-item2:hover,
+.traffic-item3:hover,
+.traffic-item4:hover {
+    border-radius: 15px;
+    color: $white;
+    background-color: $button-success;
+}
+
+.traffic-item1:active,
+.traffic-item2:active,
+.traffic-item3:active,
+.traffic-item4:active {
+    color: $button-success;
+    background-color: $white;
+    border: 1px solid $button-success;
 }
 
 .daily-traffic {

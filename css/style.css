@@ -587,7 +587,7 @@ li:first-child {
 /* ============================================= */
 /*              Graphs                           */
 /* ============================================= */
-.alert {
+.alert-box {
   display: flex;
   justify-content: space-between;
   height: 50px;
@@ -597,15 +597,15 @@ li:first-child {
   border-radius: 5px;
   background-color: #5846c2;
 }
-.alert p {
+.alert-box p {
   margin: 10px;
   font-weight: bold;
 }
-.alert span {
+.alert-box span {
   margin: 0 0.6rem;
   font-weight: lighter;
 }
-.alert .exit-icon {
+.alert-box .exit-icon {
   width: 15px;
   margin: 0 10px;
   cursor: pointer;
@@ -630,7 +630,33 @@ li:first-child {
   list-style-type: none;
 }
 .traffic-li li {
-  padding-left: 15px;
+  padding: 8px;
+  transition: 0.1s;
+}
+
+.traffic-item1,
+.traffic-item2,
+.traffic-item3,
+.traffic-item4 {
+  border: 1px solid #fff;
+}
+
+.traffic-item1:hover,
+.traffic-item2:hover,
+.traffic-item3:hover,
+.traffic-item4:hover {
+  border-radius: 15px;
+  color: #fff;
+  background-color: #63cc82;
+}
+
+.traffic-item1:active,
+.traffic-item2:active,
+.traffic-item3:active,
+.traffic-item4:active {
+  color: #63cc82;
+  background-color: #fff;
+  border: 1px solid #63cc82;
 }
 
 .daily-traffic h2 {
@@ -865,7 +891,7 @@ li:first-child {
 .big-circ1,
 .big-circ2 {
   display: flex;
-  background-color: #5846c2;
+  background-color: #777;
   margin: 0 10px;
   padding: 3px;
   min-width: 75px;
@@ -934,6 +960,10 @@ li:first-child {
 
 .margin-left {
   margin-left: auto;
+}
+
+.color-change {
+  background-color: #5846c2;
 }
 
 /* ============================================= */

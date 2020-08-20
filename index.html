@@ -85,7 +85,7 @@
 		<section id="visits" class="main-graph">
 
 			<!-- Alert Box -->
-			<div class="alert">
+			<div class="alert-box">
 				<p>Alert! <span>You have 4 new messages</span></p>
 				<img class="exit-icon" src="icons/close.svg" alt="exit">
 			</div>
@@ -94,10 +94,10 @@
 			<div class="traffic">
 				<h2>Traffic</h2>
 				<ul class="traffic-li">
-					<li>Hourly</li>
-					<li>Daily</li>
-					<li>Weekly</li>
-					<li>Monthly</li>
+					<li class="traffic-item1">Hourly</li>
+					<li class="traffic-item2">Daily</li>
+					<li class="traffic-item3">Weekly</li>
+					<li class="traffic-item4">Monthly</li>
 				</ul>
 			</div>
 
@@ -258,10 +258,9 @@
 		<section class="message-user">
 			<h4>Message User</h4>
 			<div class="message-user-form">
-				<input type="search" placeholder="Search for User">
-				<textarea id="message" name="message" placeholder="Message for User">
-				</textarea>
-				<button class="send-button">Send</button>
+				<input id="userField" type="search" placeholder="Search for User">
+				<textarea id="messageField" name="message" placeholder="Message for User"></textarea>
+				<button id="send" class="send-button">Send</button>
 			</div>
 		</section>
 
