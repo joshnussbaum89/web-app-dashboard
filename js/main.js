@@ -30,11 +30,18 @@ const alertNotificationsUl = document.querySelector('.alert-notifications-list')
 const alertNotificationsLi = document.querySelectorAll('.alert-notifications-li');
 const alertNotificationsClose = document.querySelectorAll('.alert-notifications-close');
 
+// troubleshoot
 alertNotificationsUl.addEventListener('click', () => {
-    while (alertNotificationsLi.length > 0) {
-        alertNotificationsLi[0].remove();
+    for (let i = 0; i < alertNotificationsLi.length; i++) {
+        alertNotificationsLi[i].remove();
     }
 });
+
+// alertNotificationsUl.addEventListener('click', () => {
+//     while (alertNotificationsLi.length > 0) {
+//         alertNotificationsLi[0].remove();
+//     }
+// });
 
 alertBell.addEventListener('click', () => {
     alertNotifications.classList.toggle('displayBlock');
