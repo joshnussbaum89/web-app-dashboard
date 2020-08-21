@@ -3,6 +3,7 @@
 /* ============================================= */
 body {
     height: 100vh;
+    z-index: 100;
 }
 
 #container {
@@ -91,6 +92,7 @@ section {
         @include flexy($align: center, $just: center);
     }
     .main-container-grey {
+        z-index: 0;
         background-color: $container;
         border-bottom: 1px solid $border;
         width: 90%;

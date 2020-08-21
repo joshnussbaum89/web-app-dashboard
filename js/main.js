@@ -24,6 +24,22 @@ const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
+const alertBell = document.querySelector('.bell-svg');
+const alertNotifications = document.querySelector('.alert-notifications');
+const alertNotificationsUl = document.querySelector('.alert-notifications-list');
+const alertNotificationsLi = document.querySelectorAll('.alert-notifications-li');
+const alertNotificationsClose = document.querySelectorAll('.alert-notifications-close');
+
+alertNotificationsUl.addEventListener('click', () => {
+    while (alertNotificationsLi.length > 0) {
+        alertNotificationsLi[0].remove();
+    }
+});
+
+alertBell.addEventListener('click', () => {
+    alertNotifications.classList.toggle('displayBlock');
+});
+
 // Hide search icon when focused
 search.addEventListener('focusin', () => {
     document.querySelector('.search-icon').classList.toggle('hide-content');

@@ -362,6 +362,7 @@ template {
 /* ============================================= */
 body {
   height: 100vh;
+  z-index: 100;
 }
 
 #container {
@@ -443,6 +444,7 @@ section {
   align-items: center;
 }
 .main .main-container-grey {
+  z-index: 0;
   background-color: whitesmoke;
   border-bottom: 1px solid #ccc;
   width: 90%;
@@ -578,6 +580,40 @@ li:first-child {
 .bell-svg {
   margin: 10px;
   transition: transform 0.4s ease-out;
+  cursor: pointer;
+}
+
+.alert-notifications {
+  display: none;
+  position: relative;
+  z-index: 1000;
+  width: 60%;
+  max-width: 400px;
+  margin: auto;
+}
+.alert-notifications ul {
+  padding: 10px;
+  list-style-type: none;
+  background-color: whitesmoke;
+  color: #333333;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+.alert-notifications ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 0;
+}
+.alert-notifications ul li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+.alert-notifications .alert-notifications-bell {
+  width: 20px;
+}
+.alert-notifications .alert-notifications-close {
+  width: 15px;
+  margin-left: auto;
   cursor: pointer;
 }
 

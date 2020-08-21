@@ -110,3 +110,37 @@ li:first-child {
     transition: transform .4s ease-out;
     cursor: pointer;
 }
+
+.alert-notifications {
+    display: none;
+    position: relative;
+    z-index: 1000;
+    width: 60%;
+    max-width: 400px;
+    margin: auto;
+    ul {
+        padding: 10px;
+        list-style-type: none;
+        background-color: $container;
+        color: $dark-text;
+        border: 1px solid $dark-text;
+        border-radius: 5px;
+        li {
+            @include flexy($dir: row, $align: center);
+            // flex-grow: 1;
+            padding: 15px 0;
+        }
+        li:not(:last-child) {
+            border-bottom: 1px solid $border;
+        }
+    }
+    .alert-notifications-bell {
+        width: 20px;
+    }
+    .alert-notifications-close {
+        width: 15px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+}
+
