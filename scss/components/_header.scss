@@ -112,6 +112,7 @@ li:first-child {
 }
 
 .alert-notifications {
+    cursor: pointer;
     display: none;
     position: relative;
     z-index: 1000;
