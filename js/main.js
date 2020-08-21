@@ -29,19 +29,17 @@ const alertNotifications = document.querySelector('.alert-notifications');
 const alertNotificationsUl = document.querySelector('.alert-notifications-list');
 const alertNotificationsLi = document.querySelectorAll('.alert-notifications-li');
 const alertNotificationsClose = document.querySelectorAll('.alert-notifications-close');
+let nogo = 0;
 
-// troubleshoot
-alertNotificationsUl.addEventListener('click', () => {
+alertNotificationsUl.addEventListener('click', (e) => {
     for (let i = 0; i < alertNotificationsLi.length; i++) {
-        alertNotificationsLi[i].remove();
+        e.target.remove();
+    }
+    nogo++
+    if (nogo >= 3) {
+        alertNotificationsUl.style.display = "none";
     }
 });
-
-// alertNotificationsUl.addEventListener('click', () => {
-//     while (alertNotificationsLi.length > 0) {
-//         alertNotificationsLi[0].remove();
-//     }
-// });
 
 alertBell.addEventListener('click', () => {
     alertNotifications.classList.toggle('displayBlock');

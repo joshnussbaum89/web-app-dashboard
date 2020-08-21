@@ -118,7 +118,7 @@ li:first-child {
     width: 60%;
     max-width: 400px;
     margin: auto;
-    ul {
+    &-list {
         padding: 10px;
         list-style-type: none;
         background-color: $container;
@@ -127,7 +127,6 @@ li:first-child {
         border-radius: 5px;
         li {
             @include flexy($dir: row, $align: center);
-            // flex-grow: 1;
             padding: 15px 0;
         }
         li:not(:last-child) {
@@ -135,12 +134,12 @@ li:first-child {
         }
     }
     .alert-notifications-bell {
+        pointer-events: none;
         width: 20px;
     }
     .alert-notifications-close {
         width: 15px;
         margin-left: auto;
-        cursor: pointer;
+        pointer-events: none;
     }
 }
-
