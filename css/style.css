@@ -597,7 +597,7 @@ li:first-child {
   list-style-type: none;
   background-color: #fff;
   color: #333333;
-  border: 1px solid #333333;
+  box-shadow: 1px 1px 4px #333333;
   border-radius: 5px;
 }
 .alert-notifications-list li {
@@ -761,6 +761,10 @@ li:first-child {
   border-radius: 5px;
   padding: 5px 30px;
   margin: 25px;
+  transition: 0.4s;
+}
+.stats-container:hover {
+  box-shadow: 1px 1px 4px #ccc;
 }
 
 .social-svg {

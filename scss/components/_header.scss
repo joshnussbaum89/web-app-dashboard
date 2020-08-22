@@ -124,7 +124,8 @@ li:first-child {
         list-style-type: none;
         background-color: $white;
         color: $dark-text;
-        border: 1px solid $dark-text;
+        box-shadow: 1px 1px 4px $dark-text;
+
         border-radius: 5px;
         li {
             @include flexy($dir: row, $align: center);

@@ -16,6 +16,10 @@
         border-radius: 5px;
         padding: 5px 30px;
         margin: 25px;
+        transition: .4s;
+    }
+    &-container:hover {
+        box-shadow: 1px 1px 4px $border;
     }
 }
 
