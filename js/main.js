@@ -164,5 +164,7 @@ cancelButton.addEventListener('click', () => {
 })
 
 window.onload = () => {
-    loadSettings();
+    if (localStorage.length !== 0) {
+        loadSettings();
+    }
 };
