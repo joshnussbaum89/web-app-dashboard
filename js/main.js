@@ -88,17 +88,81 @@ $(function () {
     });
 });
 
-// toggle settings switch on/off
+// Local storage
+let emailChoice1;
+let emailColor;
+let emailLabelOn;
+let emailLabelOff;
+let publicChoice1;
+let publicColor;
+let publicLabelOn;
+let publicLabelOff;
+let timeZone = document.getElementById('timezones');
+
+// toggle email settings switch on/off
 bigCirc1.addEventListener('click', () => {
-    smallCirc1.classList.toggle('margin-left');
-    bigCirc1.classList.toggle('color-change');
-    emailOn1.classList.toggle('displayBlock');
-    emailOff1.classList.toggle('displayNone');
+    emailChoice1 = smallCirc1.classList.toggle('margin-left');
+    emailColor = bigCirc1.classList.toggle('color-change');
+    emailLabelOn = emailOn1.classList.toggle('displayBlock');
+    emailLabelOff = emailOff1.classList.toggle('displayNone');
+});
+
+// toggle public settings switch on/off
+bigCirc2.addEventListener('click', () => {
+    publicChoice1 = smallCirc2.classList.toggle('margin-left');
+    publicColor = bigCirc2.classList.toggle('color-change');
+    publicLabelOn = emailOn2.classList.toggle('displayBlock');
+    publicLabelOff = emailOff2.classList.toggle('displayNone');
+});
+
+const saveButton = document.querySelector('.save-button')
+const cancelButton = document.querySelector('.cancel-button')
+
+// Save Settings 
+saveButton.addEventListener('click', () => {
+    localStorage.setItem('emailSwitch1', emailChoice1);
+    localStorage.setItem('emailSwitchColor', emailColor);
+    localStorage.setItem('emailSwitchLabelOn', emailLabelOn);
+    localStorage.setItem('emailSwitchLabelOff', emailLabelOff);
+    localStorage.setItem('publicSwitch1', publicChoice1);
+    localStorage.setItem('publicSwitchColor', publicColor);
+    localStorage.setItem('publicSwitchLabelOn', publicLabelOn);
+    localStorage.setItem('publicSwitchLabelOff', publicLabelOff);
+    localStorage.setItem('timeZoneSaved', timeZone.value);
+    alert('Settings successfully saved!');
+    location.reload();
+});
+
+// Load settings 
+const loadSettings = () => {
+    const emailSwitchSmallCirc = localStorage.getItem('emailSwitch1');
+    const publicSwitchSmallCirc = localStorage.getItem('publicSwitch1');
+    timeZone.value = localStorage.getItem('timeZoneSaved');
+
+    if (emailSwitchSmallCirc === "true") {
+        emailChoice1 = smallCirc1.classList.toggle('margin-left');
+        emailColor = bigCirc1.classList.toggle('color-change');
+        emailLabelOn = emailOn1.classList.toggle('displayBlock');
+        emailLabelOff = emailOff1.classList.toggle('displayNone');
+    }
+    if (publicSwitchSmallCirc === "true") {
+        publicChoice1 = smallCirc2.classList.toggle('margin-left');
+        publicColor = bigCirc2.classList.toggle('color-change');
+        publicLabelOn = emailOn2.classList.toggle('displayBlock');
+        publicLabelOff = emailOff2.classList.toggle('displayNone');
+    }
+
+}
+
+// Cancel settings
+cancelButton.addEventListener('click', () => {
+    const cancel = confirm('Are you sure you want to cancel changes?');
+    if (cancel) {
+        localStorage.clear();
+        location.reload();
+    }
 })
 
-bigCirc2.addEventListener('click', () => {
-    smallCirc2.classList.toggle('margin-left');
-    bigCirc2.classList.toggle('color-change');
-    emailOn2.classList.toggle('displayBlock');
-    emailOff2.classList.toggle('displayNone');
-})
+window.onload = () => {
+    loadSettings();
+};
