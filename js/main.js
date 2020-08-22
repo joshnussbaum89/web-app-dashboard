@@ -24,6 +24,7 @@ const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
+// Alert notifications
 const alertBell = document.querySelector('.bell-svg');
 const alertNotifications = document.querySelector('.alert-notifications');
 const alertNotificationsUl = document.querySelector('.alert-notifications-list');
@@ -75,7 +76,7 @@ send.addEventListener('click', () => {
     }
 });
 
-//JQuery for autocomplete 
+// JQuery for autocomplete 
 $(function () {
     const newMembers = [
         "Victoria Chambers",
@@ -107,7 +108,7 @@ bigCirc1.addEventListener('click', () => {
     emailLabelOff = emailOff1.classList.toggle('displayNone');
 });
 
-// toggle public settings switch on/off
+// Toggle public settings switch on/off
 bigCirc2.addEventListener('click', () => {
     publicChoice1 = smallCirc2.classList.toggle('margin-left');
     publicColor = bigCirc2.classList.toggle('color-change');
@@ -115,11 +116,13 @@ bigCirc2.addEventListener('click', () => {
     publicLabelOff = emailOff2.classList.toggle('displayNone');
 });
 
+// Save and cancel buttons
 const saveButton = document.querySelector('.save-button')
 const cancelButton = document.querySelector('.cancel-button')
 
 // Save Settings 
 saveButton.addEventListener('click', () => {
+
     localStorage.setItem('emailSwitch1', emailChoice1);
     localStorage.setItem('emailSwitchColor', emailColor);
     localStorage.setItem('emailSwitchLabelOn', emailLabelOn);
@@ -129,6 +132,7 @@ saveButton.addEventListener('click', () => {
     localStorage.setItem('publicSwitchLabelOn', publicLabelOn);
     localStorage.setItem('publicSwitchLabelOff', publicLabelOff);
     localStorage.setItem('timeZoneSaved', timeZone.value);
+
     alert('Settings successfully saved!');
     location.reload();
 });
@@ -151,7 +155,6 @@ const loadSettings = () => {
         publicLabelOn = emailOn2.classList.toggle('displayBlock');
         publicLabelOff = emailOff2.classList.toggle('displayNone');
     }
-
 }
 
 // Cancel settings
@@ -163,6 +166,7 @@ cancelButton.addEventListener('click', () => {
     }
 })
 
+// Load settings on page load
 window.onload = () => {
     if (localStorage.length !== 0) {
         loadSettings();
