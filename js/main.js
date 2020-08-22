@@ -75,6 +75,19 @@ send.addEventListener('click', () => {
     }
 });
 
+//JQuery for autocomplete 
+$(function () {
+    const newMembers = [
+        "Victoria Chambers",
+        "Dale Byrd",
+        "Dawn Wood",
+        "Josh Sullivan"
+    ];
+    $("#userField").autocomplete({
+        source: newMembers
+    });
+});
+
 // toggle settings switch on/off
 bigCirc1.addEventListener('click', () => {
     smallCirc1.classList.toggle('margin-left');
